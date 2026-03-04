@@ -8,6 +8,7 @@ namespace _10
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             
@@ -22,9 +23,30 @@ namespace _10
             foreach (var item in inventario)
             {
                 Console.WriteLine(item.Key + item.Value);
+
             }
 
-            
+            Console.WriteLine(" ingrese el codigo del producto que desea eliminar");
+            int BuscarCod = int.Parse(Console.ReadLine());
+
+            if (inventario.Remove(BuscarCod))
+            {
+                Console.WriteLine("producto eliminado");
+
+            }
+            else
+            {
+                Console.WriteLine(" el codigo no existe ");
+
+            }
+
+            Console.WriteLine("inventario actualizado");
+            foreach(var item in inventario)
+            {
+                Console.WriteLine(item.Key+ item.Value);
+            }
+
+
         }
     }
 }
