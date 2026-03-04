@@ -13,11 +13,18 @@ namespace _10
             
             Dictionary <int ,string > inventario = new Dictionary<int ,string>();
 
-            inventario.Add();
-            inventario.Add();
-            inventario.Add();
-            inventario.Add();
+            inventario.Add(2601, " Audifonos");
+            inventario.Add(1995," Monitor 4k");
+            inventario.Add(2001, " Mouse ");
+            inventario.Add(1959, " disco solido");
 
+            Console.WriteLine(" inventario actual");
+            foreach (var item in inventario)
+            {
+                Console.WriteLine(item.Key + item.Value);
+            }
+
+            
         }
     }
 }
